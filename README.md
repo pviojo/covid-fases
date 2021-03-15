@@ -22,3 +22,7 @@ Origen de datos:
 
 * https://github.com/MinCiencia/Datos-COVID19/tree/master/output/producto19
 * https://github.com/MinCiencia/Datos-COVID19/tree/master/output/producto74
+
+## Licencia
+
+[MIT](https://opensource.org/licenses/MIT)

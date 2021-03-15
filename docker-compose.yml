@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  service:
+    network_mode: bridge
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - './src:/app'
+      - './output:/tmp/output'
+    environment:
+      PYTHONUNBUFFERED: 1      

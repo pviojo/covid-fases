@@ -51,7 +51,10 @@ def process():
     # Get Periods per comuna and step
     df = pd.read_csv('https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto74/paso_a_paso.csv')
 
+    
     dates = list(df.iloc[0:0, 5:].columns)
+    last_date = dates[-1]
+    
     comunas_data={}
     for i, j in df.iterrows(): 
         region_code = j[0]
@@ -78,6 +81,7 @@ def process():
                             'pct_delta_active_cases': (
                                 (active_cases_end / max(period.get('active_cases_start'), 1))-1
                             )*100,
+                            'current': 1 if end == last_date else 0,
                         }
                     }
                     periods.append(period)
@@ -113,12 +117,17 @@ def process():
                 'active_cases_start': b.get('active_cases_start'),
                 'active_cases_end': b.get('active_cases_end'),
                 'delta_active_cases': b.get('delta_active_cases'),
-                'pct_delta_active_cases': b.get('pct_delta_active_cases')
+                'pct_delta_active_cases': b.get('pct_delta_active_cases'),
+                'current': b.get('current')
             }
             rows.append(row)
     return rows
 
 rows = process()
 today = datetime.today().strftime('%Y-%m-%d')
+current_fases = filter(lambda x: x.get('current') == 1, rows)
+
 pd.DataFrame(rows).to_csv(f"/tmp/output/output-{today}.csv",index=False)
 pd.DataFrame(rows).to_csv(f"/tmp/output/latest.csv",index=False)
+pd.DataFrame(current_fases).to_csv(f"/tmp/output/current_fases.csv",index=False)
+pd.DataFrame(current_fases).to_csv(f"/tmp/output/current_fases-{today}.csv",index=False)

@@ -121,3 +121,4 @@ def process():
 rows = process()
 today = datetime.today().strftime('%Y-%m-%d')
 pd.DataFrame(rows).to_csv(f"/tmp/output/output-{today}.csv",index=False)
+pd.DataFrame(rows).to_csv(f"/tmp/output/latest.csv",index=False)

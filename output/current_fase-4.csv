@@ -1,0 +1,26 @@
+region_code,region,comuna_code,comuna,zone,step,start,end,active_cases_start,active_cases_end,delta_active_cases,pct_delta_active_cases,current
+5,Valparaíso,5201,Isla de Pascua,Total,4,2021-03-04,2021-03-25,0,4,4,300.0,1
+5,Valparaíso,5104,Juan Fernández,Total,4,2020-08-24,2021-03-25,0,0,0,-100.0,1
+11,Aysén,11201,Aisén,Urbana,4,2021-03-04,2021-03-25,7,21,14,200.0,1
+11,Aysén,11201,Aisén,Puerto Chacabuco,4,2021-03-04,2021-03-25,7,21,14,200.0,1
+11,Aysén,11201,Aisén,Isla Las Huichas,4,2021-03-04,2021-03-25,7,21,14,200.0,1
+11,Aysén,11201,Aisén,Rural,4,2021-03-04,2021-03-25,7,21,14,200.0,1
+11,Aysén,11401,Chile Chico,Rural,4,2020-07-28,2021-03-25,0,10,10,900.0,1
+11,Aysén,11401,Chile Chico,Urbana,4,2021-03-04,2021-03-25,1,10,9,900.0,1
+11,Aysén,11202,Cisnes,Total,4,2020-07-28,2021-03-25,0,1,1,0.0,1
+11,Aysén,11301,Cochrane,Rural,4,2020-07-28,2021-03-25,0,5,5,400.0,1
+11,Aysén,11301,Cochrane,Urbana,4,2021-02-25,2021-03-25,1,5,4,400.0,1
+11,Aysén,11203,Guaitecas,Total,4,2020-07-28,2021-03-25,0,16,16,1500.0,1
+11,Aysén,11102,Lago Verde,Total,4,2020-07-28,2021-03-25,0,0,0,-100.0,1
+11,Aysén,11302,O'Higgins,Total,4,2020-07-28,2021-03-25,0,0,0,-100.0,1
+11,Aysén,11402,Río Ibáñez,Total,4,2020-07-28,2021-03-25,0,6,6,500.0,1
+11,Aysén,11303,Tortel,Total,4,2020-07-28,2021-03-25,0,0,0,-100.0,1
+12,Magallanes,12201,Cabo de Hornos,Total,4,2021-02-25,2021-03-25,0,7,7,600.0,1
+12,Magallanes,12201,Cabo de Hornos,Puerto Williams,4,2021-02-25,2021-03-25,0,7,7,600.0,1
+12,Magallanes,12102,Laguna Blanca,Total,4,2021-02-25,2021-03-25,0,0,0,-100.0,1
+12,Magallanes,12301,Porvenir,Total,4,2021-03-04,2021-03-25,6,3,-3,-50.0,1
+12,Magallanes,12302,Primavera,Total,4,2021-03-04,2021-03-25,2,0,-2,-100.0,1
+12,Magallanes,12103,Río Verde,Total,4,2021-03-04,2021-03-25,0,0,0,-100.0,1
+12,Magallanes,12104,San Gregorio,Total,4,2021-02-25,2021-03-25,0,1,1,0.0,1
+12,Magallanes,12303,Timaukel,Total,4,2021-03-08,2021-03-25,0,1,1,0.0,1
+12,Magallanes,12402,Torres del Paine,Total,4,2021-02-25,2021-03-25,0,0,0,-100.0,1

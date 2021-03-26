@@ -1,3 +1,4 @@
+from shutil import copyfile
 from datetime import datetime, timedelta
 import pandas as pd
 import math
@@ -128,6 +129,11 @@ today = datetime.today().strftime('%Y-%m-%d')
 current_fases = filter(lambda x: x.get('current') == 1, rows)
 
 pd.DataFrame(rows).to_csv(f"/tmp/output/output-{today}.csv",index=False)
-pd.DataFrame(rows).to_csv(f"/tmp/output/latest.csv",index=False)
-pd.DataFrame(current_fases).to_csv(f"/tmp/output/current_fases.csv",index=False)
+copyfile(f'/tmp/output/output-{today}.csv', f'/tmp/output/latest.csv')
 pd.DataFrame(current_fases).to_csv(f"/tmp/output/current_fases-{today}.csv",index=False)
+copyfile(f'/tmp/output/current_fases-{today}.csv', f'/tmp/output/current_fases.csv')
+for i in range(1,6):
+    current_fases = filter(lambda x: x.get('current') == 1 and int(x.get('step')) == i, rows)
+    pd.DataFrame(current_fases).to_csv(f"/tmp/output/current_fase-{i}-{today}.csv",index=False)
+    copyfile(f'/tmp/output/current_fase-{i}-{today}.csv', f'/tmp/output/current_fase-{i}.csv')
+    

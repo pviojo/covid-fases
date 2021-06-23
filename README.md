@@ -1,6 +1,6 @@
 # Covid Fases
 
-Script que genera un archivo con los periodos de cada comuna según fase del plan paso a paso y sus casos activos al comienzo y fin.
+Script que genera un archivo con los periodos de cada comuna según fase del plan paso a paso y sus casos activos al comienzo y fin. **Se actualiza en la siguiente hora decambios en los origenes de datos.**
 
 
 ## Prerequisitos
